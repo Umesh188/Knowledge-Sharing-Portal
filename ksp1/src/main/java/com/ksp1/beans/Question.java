@@ -7,7 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +25,8 @@ public class Question
 		private int id;
 		private String question;
 		private String subject;
-		//@OneToOne
+		
+		
 		//private User user;
 		@Transient
 		@Autowired
@@ -42,12 +45,13 @@ public class Question
 			super();
 		}
 
-		public Question(String question, String subject) 
+		public Question(String question, String subject/*,User user*/) 
 		{
 			super();
 			
 			this.question = question;
 			this.subject = subject;
+			//this.user=user;
 			
 		}
 

@@ -1,10 +1,13 @@
 package com.ksp1.beans;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,7 +21,7 @@ public class User
 	private int user_id;
 	private String username;
 	private String password;
-	private int role;
+	private String role;
 	private String first_name;
 	private String last_name;
 
@@ -28,12 +31,12 @@ public class User
 	}
 
 
-	public User( String username, String password, int role, String first_name, String last_name) {
+	public User( String username, String password, String role2, String first_name, String last_name) {
 		super();
 		
 		this.username = username;
 		this.password = password;
-		this.role = role;
+		this.role = role2;
 		this.first_name = first_name;
 		this.last_name = last_name;
 	}
@@ -69,12 +72,12 @@ public class User
 	}
 
 
-	public int getRole() {
+	public String getRole() {
 		return role;
 	}
 
 
-	public void setRole(int role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 

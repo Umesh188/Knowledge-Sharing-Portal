@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
@@ -255,7 +256,7 @@ li {
 
 
 
-<form action="AskedQuestion" method="post" >
+<form action="question_in_review" method="post" >
 <input type="text" name="question" >
 <select name="subject">
 <c:forEach var="subject" items="${sub}">

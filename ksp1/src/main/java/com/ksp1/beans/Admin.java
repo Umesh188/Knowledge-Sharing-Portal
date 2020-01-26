@@ -12,7 +12,7 @@ import javax.persistence.Entity;
 		}
 		
 
-		public Admin(String username, int role, String password, String first_name, String last_name) {
+		public Admin(String username, String role, String password, String first_name, String last_name) {
 			super(username, password, role,first_name,last_name);
 		}
 

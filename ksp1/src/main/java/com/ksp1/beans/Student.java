@@ -19,7 +19,7 @@ public class Student extends User {
 		this.score = 0;
 	}
 
-	public Student(String username, String password,int role, String first_name, String last_name, int score ) {
+	public Student(String username, String password,String role, String first_name, String last_name, int score ) {
 		super(username, password, role,first_name,last_name);
 		this.score = 0;
 	}

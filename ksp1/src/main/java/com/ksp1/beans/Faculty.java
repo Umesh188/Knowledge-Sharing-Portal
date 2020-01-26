@@ -14,7 +14,7 @@ public class Faculty extends User
 		super();
 	}
 
-	public Faculty(String username, String password, int role, String first_name, String last_name) {
+	public Faculty(String username, String password, String role, String first_name, String last_name) {
 		super(username, password, role,first_name,last_name);
 		
 	}
